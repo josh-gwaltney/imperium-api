@@ -1,0 +1,36 @@
+{
+  "name": "imperium-api",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Josh Gwaltney",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josh-gwaltney/imperium-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josh-gwaltney/imperium-api/issues"
+  },
+  "homepage": "https://github.com/josh-gwaltney/imperium-api#readme",
+  "license": "MIT",
+  "scripts": {
+    "build": "set NODE_ENV=dev && webpack",
+    "start": "babel-node index.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "compression": "latest",
+    "express": "latest",
+    "mongoose": "latest",
+    "morgan": "latest"
+  },
+  "devDependencies": {
+    "babel-cli": "latest",
+    "babel-core": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-es2016": "latest",
+    "babel-preset-es2017": "latest",
+    "babel-preset-stage-2": "latest",
+    "cross-env": "latest"
+  }
+}
