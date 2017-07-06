@@ -1,0 +1,10 @@
+{
+  "id": "1234567890",
+  "username": "Username",
+  "firstName": "First",
+  "lastName": "Last",
+  "emailAddress": "email@domain.com",
+  "password": "password",
+  "dateCreated": "",
+  "lastLogin": ""
+}
