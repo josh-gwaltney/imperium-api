@@ -1,8 +1,8 @@
 /**
- * Imperium 4X (Shared) - Account
+ * Imperium 4X (Shared) - Token
  * ===
  *
- * @module game
+ * @module token
  */
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -14,15 +14,12 @@ import mongoose from 'mongoose';
 // Definitions
 ////////////////////////////////////////////////////////////////////////////////
 const SCHEMA = mongoose.Schema;
-const accountSchema = new SCHEMA({
-  username: String,
-  emailAddress: String,
-  password: String,
-  dateCreated: Date,
-  lastLogin: Date
+const tokenSchema = new SCHEMA({
+  token: String,
+  expires: Number
 });
 
 ////////////////////////////////////////////////////////////////////////////////
 // Exports
 ////////////////////////////////////////////////////////////////////////////////
-export default mongoose.model('Account', accountSchema);
+export default mongoose.model('Token', tokenSchema);

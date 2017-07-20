@@ -286,6 +286,14 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
+babel-loader@latest:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.1.tgz#b87134c8b12e3e4c2a94e0546085bc680a2b8488"
+  dependencies:
+    find-cache-dir "^1.0.0"
+    loader-utils "^1.0.2"
+    mkdirp "^0.5.1"
+
 babel-messages@^6.23.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-messages/-/babel-messages-6.23.0.tgz#f3cdf4703858035b2a2951c6ec5edf6c62f2630e"
@@ -700,6 +708,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+big.js@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
+
 binary-extensions@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.8.0.tgz#48ec8d16df4377eae5fa5884682480af4d95c774"
@@ -815,6 +827,10 @@ commander@^2.8.1:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
+commondir@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
+
 compressible@~2.0.8:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.10.tgz#feda1c7f7617912732b29bf8cf26252a20b9eecd"
@@ -895,13 +911,13 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-debug@2.6.7:
+debug@2.6.7, debug@^2.1.1:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.7.tgz#92bad1f6d05bbb6bba22cca88bcd0ec894c2861e"
   dependencies:
     ms "2.0.0"
 
-debug@2.6.8, debug@^2.1.1, debug@^2.2.0:
+debug@2.6.8, debug@^2.2.0:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
@@ -948,6 +964,10 @@ ecc-jsbn@~0.1.1:
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+
+emojis-list@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
 encodeurl@~1.0.1:
   version "1.0.1"
@@ -1057,6 +1077,20 @@ finalhandler@~1.0.3:
     parseurl "~1.3.1"
     statuses "~1.3.1"
     unpipe "~1.0.0"
+
+find-cache-dir@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-1.0.0.tgz#9288e3e9e3cc3748717d39eade17cf71fc30ee6f"
+  dependencies:
+    commondir "^1.0.1"
+    make-dir "^1.0.0"
+    pkg-dir "^2.0.0"
+
+find-up@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
+  dependencies:
+    locate-path "^2.0.0"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -1421,6 +1455,21 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
+loader-utils@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
+  dependencies:
+    big.js "^3.1.3"
+    emojis-list "^2.0.0"
+    json5 "^0.5.0"
+
+locate-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
+  dependencies:
+    p-locate "^2.0.0"
+    path-exists "^3.0.0"
+
 lodash@^4.14.0, lodash@^4.2.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
@@ -1437,6 +1486,12 @@ lru-cache@^4.0.1:
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
+
+make-dir@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.0.0.tgz#97a011751e91dd87cfadef58832ebb04936de978"
+  dependencies:
+    pify "^2.3.0"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -1538,7 +1593,7 @@ mongoose@latest:
     regexp-clone "0.0.1"
     sliced "1.0.1"
 
-morgan@^1.8.2:
+morgan@latest:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.8.2.tgz#784ac7734e4a453a9c6e6e8680a9329275c8b687"
   dependencies:
@@ -1679,6 +1734,16 @@ output-file-sync@^1.1.0:
     mkdirp "^0.5.1"
     object-assign "^4.1.0"
 
+p-limit@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.1.0.tgz#b07ff2d9a5d88bec806035895a2bab66a27988bc"
+
+p-locate@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
+  dependencies:
+    p-limit "^1.1.0"
+
 parse-glob@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/parse-glob/-/parse-glob-3.0.4.tgz#b2c376cfb11f35513badd173ef0bb6e3a388391c"
@@ -1692,6 +1757,10 @@ parseurl@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.1.tgz#c8ab8c9223ba34888aa64a297b28853bec18da56"
 
+path-exists@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
+
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
@@ -1703,6 +1772,16 @@ path-to-regexp@0.1.7:
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
+
+pify@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
+
+pkg-dir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
+  dependencies:
+    find-up "^2.1.0"
 
 preserve@^0.2.0:
   version "0.2.0"

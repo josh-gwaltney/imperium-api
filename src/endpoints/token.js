@@ -1,28 +1,30 @@
 /**
- * Imperium 4X (Shared) - Account
+ *
  * ===
  *
- * @module game
  */
 
 ////////////////////////////////////////////////////////////////////////////////
 // Imports
 ////////////////////////////////////////////////////////////////////////////////
-import mongoose from 'mongoose';
+import Account from '../models/account';
+import Token from '../models/token';
 
 ////////////////////////////////////////////////////////////////////////////////
 // Definitions
 ////////////////////////////////////////////////////////////////////////////////
-const SCHEMA = mongoose.Schema;
-const accountSchema = new SCHEMA({
-  username: String,
-  emailAddress: String,
-  password: String,
-  dateCreated: Date,
-  lastLogin: Date
-});
+let postToken = (req, res) => {
+  let grantType = req.header('grant_type');
+  let username = req.header('username');
+  let password = req.header('password');
+  res.json({
+    grantType: grantType,
+    username: username,
+    password: password
+  });
+};
 
 ////////////////////////////////////////////////////////////////////////////////
 // Exports
 ////////////////////////////////////////////////////////////////////////////////
-export default mongoose.model('Account', accountSchema);
+export { postToken };

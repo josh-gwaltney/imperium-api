@@ -1,3 +1,45 @@
 /**
- * Created by Josh on 6/21/2017.
+ *
+ * ===
+ *
  */
+
+////////////////////////////////////////////////////////////////////////////////
+// Imports
+////////////////////////////////////////////////////////////////////////////////
+import Account from '../models/account';
+
+////////////////////////////////////////////////////////////////////////////////
+// Definitions
+////////////////////////////////////////////////////////////////////////////////
+let getAccount = (req, res) => {
+  let { id } = req.params;
+  //Game.findById(id, (err, game) => {
+  //  if (err) { res.send(err); }
+  //  res.json(game);
+  //})
+  res.json('GET /accounts/' + id);
+};
+
+let getAccounts = (req, res) => {
+  Account.find({}, function(err, accounts){
+    if(err) res.send(err);
+    res.json(accounts);
+  });
+};
+
+let postAccount = (req, res) => {
+  let account = new Account();
+  account.username = req.body.username;
+  account.password = req.body.password;
+
+  account.save(function(err){
+    if(err) res.send(err);
+    res.json({ message: 'account created' });
+  });
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// Exports
+////////////////////////////////////////////////////////////////////////////////
+export { getAccount, getAccounts, postAccount };

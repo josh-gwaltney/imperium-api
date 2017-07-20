@@ -8,32 +8,42 @@
 // Imports
 ////////////////////////////////////////////////////////////////////////////////
 import Game from '../models/game';
+import GameFactory from '../game/game-factory';
 
 ////////////////////////////////////////////////////////////////////////////////
 // Definitions
 ////////////////////////////////////////////////////////////////////////////////
 let getGames = (req, res) => {
-
+  Game.find({}, function(err, games){
+    if(err) res.send(err);
+    res.json(games);
+  });
 };
 
 let getGame = (req, res) => {
+  console.log(req.params);
   let { id } = req.params;
-  Game.findById(id, (err, game) => {
-    if (err) { res.send(err); }
+  Game.findOne({
+    _id: id
+    }, function(err, game) {
+    if (err) res.send(err);
     res.json(game);
-  })
+  });
 };
 
 let postGame = (req, res) => {
-  let game = Object.assing(new Game(), req.body);
-  game.save(err => {
-    if(err) { res.send(err); }
-    res.json({ message: 'game created' });
-  })
-
+  let factory = new GameFactory();
+  let game = new Game();
+  game.save(function(err){
+    if(err) res.send(err);
+    res.json(game);
+  });
 };
 
+let putGame = (req, res) => {
+
+};
 ////////////////////////////////////////////////////////////////////////////////
 // Exports
 ////////////////////////////////////////////////////////////////////////////////
-export { getGame, postGame };
+export { getGames, getGame, postGame };
